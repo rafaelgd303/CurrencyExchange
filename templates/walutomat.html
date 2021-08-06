@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Walutomat</title>
+  </head>
+<body>
+<h1>Walutomat</h1>
+<p>Rozpoczynamy obliczenia:</p>
+  <form action="/result" method="POST">
+    <label for="curre_code">Wybierz kod waluty:</label>
+      {{ form.csrf_token }}
+      {{ form.curre_code }}
+    <br><br>
+    <label for="currency_amount">Ile waluty chcesz kupić?:</label>
+    <input type="text" id="currency_amount" name="currency_amount"><br><br>
+    <input type="submit" value="Przelicz">
+  </form>
+  <p>Kliknij przelicz aby zobaczyć rezultat"</p>
+
+</body>
+</html>
